@@ -18,7 +18,13 @@
     </ul>
 
   <div class="tab-content">
-    <div class="tab-pane fade show active" id="basics" role="tabpanel" aria-labelledby="basics-tab">Basic stuff here</div>
+    <div class="tab-pane fade show active" id="basics" role="tabpanel" aria-labelledby="basics-tab">
+      <ul>
+        {% for t in TOPIC_DICT['Basics'] %}
+          <li><a href='{{ t[1] }} '>{{ t[0] }}</a></li>
+        {% endfor %}
+      </ul>  
+    </div>
     <div class="tab-pane fade" id="wdev" role="tabpanel" aria-labelledby="wdev-tab">Web Dev stuff here</div>
     <div class="tab-pane fade" id="datan" role="tabpanel" aria-labelledby="datan-tab">Data Analysis stuff</div>
     <div class="tab-pane fade" id="datasci" role="tabpanel" aria-labelledby="datasci-tab">Data Science stuff</div>
