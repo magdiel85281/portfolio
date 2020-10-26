@@ -40,28 +40,22 @@
 </header>
 
 
-
 <body>
-
     <div class="border border-primary" style="width: 100%; margin-bottom: 15px">
     </div>
-
     <div class="container-fluid" style="height: 100%; min-height: 100%;">
 
         {% block body %}
 
         {% endblock %}
 
-
-    </div>
+      </div>
 
     <!-- scripts for dropdown -->
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}">
     </script>
-  
+
 </body>
-
-
 </html>
 
