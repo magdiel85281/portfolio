@@ -1,42 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='codingbrowser_102152.ico') }}">
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='codingbrowser_102152.ico') }}">
 </head>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">
-            <img style="max-width:50px; margin-top:0px;" src="{{ url_for('static', filename='img/M.png') }}">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Logo -->
+    <a class="navbar-brand" href="/">
+        <img style="max-width:50px; margin-top:0px;" src="{{ url_for('static', filename='img/M.png') }}">
+    </a>
 
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">About Me <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Projects
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Buttons on left -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" style='min-width: 90px;'>About Me<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Projects
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Articles<span class="sr-only"></a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- Buttons on right -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Contact Me!</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Contact Me!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <form>
+              <div class="form-group">
+                <label for="ContactName">Your Name</label>
+                <input type="text" class="form-control" id="ContactName" placeholder="Name">
               </div>
-            </li>
-          </ul>
-        </div>
+              <div class="form-group">
+                <label for="ContactEmail">Your Email</label>
+                <input type="text" class="form-control" id="ContactEmail" placeholder="Email">
+              </div>
 
-      </nav>
+              <div class="form-group">
+                <label for="ContactMessage">Message</label>
+                <textarea type="text" class="form-control" id="ContactMessage" style="white-space: pre-wrap;" placeholder="Message"></textarea>
+              </div>
+            </form>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
 </header>
 
 
