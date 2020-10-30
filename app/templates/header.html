@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Portfolio</title>
+  <title>MD Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
-  <link rel="shortcut icon" href="{{ url_for('static', filename='codingbrowser_102152.ico') }}">
+  <link href="{{ url_for('static', filename='css/site.css') }}" rel="stylesheet">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/M.png') }}">
 </head>
 
 <header>
@@ -91,7 +92,7 @@
 
 
 <body>
-    <div class="border border-primary" style="width: 100%; margin-bottom: 15px">
+    <div class="border border-primary" style="width: 100%; margin-bottom: 15px; opacity: 0.5;">
     </div>
     <div class="container-fluid" style="height: 100%; min-height: 100%;">
 
@@ -105,7 +106,6 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}">
     </script>
-
 </body>
 </html>
 
