@@ -46,10 +46,10 @@
 
     <!-- Buttons on right -->
     <!-- Button trigger modal -->
-    <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Contact Me!</button>
+    <button type="button" class="btn" style="border: 3px solid rgb(121, 177, 233);" data-toggle="modal" data-target="#eventInput" data-whatever="@mdo">Contact Me!</button>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="eventInput" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -59,30 +59,29 @@
             </button>
           </div>
 
-          <div class="modal-body">
-
-            <form>
+          <form id="target" action="/contact/">
+            <div class="modal-body">
               <div class="form-group">
                 <label for="ContactName">Your Name</label>
-                <input type="text" class="form-control" id="ContactName" placeholder="Name">
+                <input type="text" class="form-control" name="ContactName" id="ContactName" placeholder="Name">
               </div>
               <div class="form-group">
                 <label for="ContactEmail">Your Email</label>
-                <input type="text" class="form-control" id="ContactEmail" placeholder="Email">
+                <input type="text" class="form-control" name="ContactEmail" id="ContactEmail" placeholder="Email">
               </div>
 
               <div class="form-group">
                 <label for="ContactMessage">Message</label>
-                <textarea type="text" class="form-control" id="ContactMessage" style="white-space: pre-wrap;" placeholder="Message"></textarea>
+                <textarea type="text" class="form-control" name="ContactMessage" id="ContactMessage" style="white-space: pre-wrap;" placeholder="Message"></textarea>
               </div>
-            </form>
+            </div>
+            
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+          </form>
 
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Send message</button>
-          </div>
         </div>
       </div>
     </div>
@@ -106,6 +105,34 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}">
     </script>
+
+    <!-- script for writing contact message to database -->
+    <script>
+      $( "#target" ).submit(function( event ) {
+        event.preventDefault();
+        var new_event = {
+              'ContactName': document.getElementById('ContactName').value,
+              'ContactEmail': document.getElementById('ContactEmail').value,
+              'ContactMessage': document.getElementById('ContactMessage').value
+            };
+            console.log(new_event);
+
+
+      $.ajax({
+              url: '/contact/',
+              data: $('form').serialize(),
+              type: 'POST',
+              success: function(response) {
+                  console.log(response);
+              },
+              error: function(error) {
+                  console.log(error);
+              }
+          });
+
+      });  
+    </script> 
+
 </body>
 </html>
 
