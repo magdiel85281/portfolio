@@ -13,7 +13,7 @@ installs:
 	sudo apt-get upgrade
 	sudo apt-get -y install apache2
 	sudo apt-get -y install libapache2-mod-wsgi python-dev
-	# sudo apt-get -y install mysql-client mysql-server
+	# sudo apt-get -y install mysql-server
 	# sudo mysql_secure_installation
 	sudo apt -y install php libapache2-mod-php
 	sudo systemctl restart apache2
