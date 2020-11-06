@@ -44,7 +44,6 @@
     </div>
 
 
-    <!-- Buttons on right -->
     <!-- Button trigger modal -->
     <button type="button" class="btn" style="border: 3px solid rgb(121, 177, 233);" data-toggle="modal" data-target="#eventInput" data-whatever="@mdo">Contact Me!</button>
 
@@ -86,53 +85,50 @@
       </div>
     </div>
   </nav>
-
 </header>
 
-
 <body>
-    <div class="border border-primary" style="width: 100%; margin-bottom: 15px; opacity: 0.5;">
-    </div>
-    <div class="container-fluid" style="height: 100%; min-height: 100%;">
+  <div class="border border-primary" style="width: 100%; margin-bottom: 15px; opacity: 0.5;">
+  </div>
+  <div class="container-fluid" style="height: 100%; min-height: 100%;">
 
-        {% block body %}
+    {% block body %}
 
-        {% endblock %}
+    {% endblock %}
 
-      </div>
-
-    <!-- scripts for dropdown -->
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}">
-    </script>
-
-    <!-- script for writing contact message to database -->
-    <script>
-      $( "#target" ).submit(function( event ) {
-        event.preventDefault();
-        var new_event = {
-              'ContactName': document.getElementById('ContactName').value,
-              'ContactEmail': document.getElementById('ContactEmail').value,
-              'ContactMessage': document.getElementById('ContactMessage').value
-            };
-            console.log(new_event);
-
-
-      $.ajax({
-              url: '/contact/',
-              data: $('form').serialize(),
-              type: 'POST',
-              success: function(response) {
-                  console.log(response);
-              },
-              error: function(error) {
-                  console.log(error);
-              }
-          });
-
-      });  
-    </script> 
-
+  </div>
 </body>
+
+
+<!-- scripts for dropdown -->
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}">
+</script>
+
+<!-- script for writing Contact Me message to database -->
+<script>
+  $( "#target" ).submit(function( event ) {
+    event.preventDefault();
+    var new_event = {
+          'ContactName': document.getElementById('ContactName').value,
+          'ContactEmail': document.getElementById('ContactEmail').value,
+          'ContactMessage': document.getElementById('ContactMessage').value
+        };
+        console.log(new_event);
+
+  $.ajax({
+          url: '/contact/',
+          data: $('form').serialize(),
+          type: 'POST',
+          success: function(response) {
+              console.log(response);
+          },
+          error: function(error) {
+              console.log(error);
+          }
+      });
+  });  
+</script> 
+
 </html>
 
