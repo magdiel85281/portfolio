@@ -7,10 +7,22 @@
   <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ url_for('static', filename='css/site.css') }}" rel="stylesheet">
   <link rel="shortcut icon" href="{{ url_for('static', filename='img/M.png') }}">
+
+  <style>
+    nav.navbar {
+      position: fixed;
+      width: 100%;
+      border-bottom-style: solid;
+      border-color: rgb(121, 177, 233);
+      border-width: 3px;
+
+    }
+  </style>
+
 </head>
 
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; width: 100%">
 
     <!-- Logo -->
     <a class="navbar-brand" href="/">
@@ -88,8 +100,8 @@
 </header>
 
 <body>
-  <div class="border border-primary" style="width: 100%; margin-bottom: 15px; opacity: 0.5;">
-  </div>
+  <!-- <div class="border border-primary" style="width: 100%; margin-bottom: 15px; opacity: 0.5;">
+  </div> -->
   <div class="container-fluid" style="height: 100%; min-height: 100%;">
 
     {% block body %}
