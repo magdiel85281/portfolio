@@ -1,24 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MD Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style>
+
+    :root {
+          --borderline: rgb(121, 177, 233);
+        }
+
+    div.project_gallery {
+      height: 400px;
+      border: 2px; 
+      border-style: solid;
+      border-color: var(--borderline);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    div.project-gallery img {
+      width: auto;
+      height: 400px;
+      /* padding: 5px; */
+    }
+
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+
+    @media only screen and (max-width: 800px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .container {
+      position: relative;
+      max-height: 500px;
+      /* width: 25%; */
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+    }
+
+    .container:hover .overlay {
+      opacity: 1;
+    }
+
+    .text {
+      color: black;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
+
+  </style>  
+</head>
+
 {% extends "header.html" %}
 
 {% block body %}
 
 <body>
 
-  <div class="jumbotron text-center">
-    <h1 class="display-4" style="background: url(../static/img/paul-van-cotthem-gQZTOtbD2Js-unsplash.jpg); letter-spacing: 10px; color:aqua"><strong>PORTFOLIO</strong></h1>
-      <p class="lead" style="letter-spacing: 8px; color:brown"><strong>MAGDIEL DELGADILLO</strong></p>
-        <div class="border border-primary" style="width: 100%; margin-bottom: 15px; opacity: 0.5;">
+      <!-- <div class="container">
+        <img src="/static/img/titanic_sibsp_age.PNG" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h2 class="card-title">Titanic</h2>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         </div>
-      <p style="color:brown; letter-spacing: 3px;">Welcome. This is a collection of my work.</p>
-  </div>
+      </div> -->
 
-  <div class="card bg-dark text-black">
-    <img src="/static/img/1200px-RMS_Titanic_3.jpg" style="max-height: 500px;" class="card-img" alt="...">
-    <div class="card-img-overlay">
-      <h2 class="card-title">Card title</h2>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-  </div>
+      <div class="responsive">
+        <div class="project_gallery">
+          <a target="_blank" href="/static/img/titanic_sibsp_age.PNG">
+            <img src="/static/img/titanic_sibsp_age.PNG" alt="...">
+          </a>
+        </div>
+      </div>
+      
+      <!-- <div class="container">
+        <img src="/static/img/logo.png" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h2 class="card-title">Predict Sales</h2>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div> -->
+
+      <div class="responsive">
+        <div class="project_gallery">
+          <a target="_blank" href="/static/img/logo.png">
+            <img src="/static/img/logo.png" alt="...">
+          </a>
+        </div>
+      </div>
+      
+
+      <!-- <div class="container">
+        <img src="/static/img/depositphotos_21340889-stock-illustration-metatrons-cube-sacred-geometry-flower.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h2 class="card-title">Something Else</h2>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>       -->
+
+      <div class="responsive">
+        <div class="project_gallery">
+          <a target="_blank" href="/static/img/depositphotos_21340889-stock-illustration-metatrons-cube-sacred-geometry-flower.jpg">
+            <img src="/static/img/depositphotos_21340889-stock-illustration-metatrons-cube-sacred-geometry-flower.jpg" alt="..." width="600" height="400">
+          </a>
+        </div>
+      </div>
+      
+
+      <!-- <div class="container">
+        <img src="/static/img/titanic_sibsp_age.PNG" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h2 class="card-title">Card title</h2>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>       -->
+
+      <div class="responsive">
+        <div class="project_gallery">
+          <a target="_blank" href="/static/img/titanic_sibsp_age.PNG">
+            <img src="/static/img/titanic_sibsp_age.PNG" alt="..." width="600" height="400">
+          </a>
+        </div>
+      </div>
+      
+
+    <div class="clearfix"></div>
+    
+  <div style="padding: 8px;"></div>
+
 
   {% include 'about_me.html' %}
   {% include 'footer.html' %}
@@ -27,3 +177,4 @@
 
 {% endblock %}
 
+</html>
