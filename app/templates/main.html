@@ -12,6 +12,7 @@
         }
 
     div.project_gallery {
+      position: relative;
       height: 400px;
       border: 2px; 
       border-style: solid;
@@ -21,9 +22,10 @@
     }
 
     div.project-gallery img {
-      width: auto;
-      height: 400px;
-      /* padding: 5px; */
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: auto;
     }
 
     .responsive {
@@ -51,12 +53,6 @@
       clear: both;
     }
 
-    .container {
-      position: relative;
-      max-height: 500px;
-      /* width: 25%; */
-    }
-
     .image {
       display: block;
       width: 100%;
@@ -65,29 +61,37 @@
 
     .overlay {
       position: absolute;
-      top: 0;
       bottom: 0;
       left: 0;
       right: 0;
-      height: 100%;
+      height: 0;
       width: 100%;
-      opacity: 0;
+      background-color: aqua;
+      opacity: 0.75;
       transition: .5s ease;
     }
 
-    .container:hover .overlay {
-      opacity: 1;
-    }
 
     .text {
+      /* white-space: pre-wrap; */
       color: black;
       font-size: 20px;
+      font-weight: bold;
+      opacity: 1;
       position: absolute;
-      top: 50%;
+      overflow: hidden;
+      /* margin-top: auto; */
+      /* margin-left: auto; */
+      top: 25%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
     }
+
+
+    .project_gallery:hover .overlay {
+      height: 100%;
+    }    
 
   </style>  
 </head>
@@ -98,68 +102,46 @@
 
 <body>
 
-      <!-- <div class="container">
-        <img src="/static/img/titanic_sibsp_age.PNG" class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h2 class="card-title">Titanic</h2>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div> -->
-
       <div class="responsive">
         <div class="project_gallery">
           <a target="_blank" href="/static/img/titanic_sibsp_age.PNG">
-            <img src="/static/img/titanic_sibsp_age.PNG" alt="...">
+            <img src="/static/img/titanic_sibsp_age.PNG" alt="..." width="auto" height="400">
+            <div class="overlay">
+              <div class="text">This is a project. This is a project. This is a project. This is a project. This is a project.</div>
+            </div>
           </a>
         </div>
       </div>
       
-      <!-- <div class="container">
-        <img src="/static/img/logo.png" class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h2 class="card-title">Predict Sales</h2>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div> -->
-
       <div class="responsive">
         <div class="project_gallery">
           <a target="_blank" href="/static/img/logo.png">
-            <img src="/static/img/logo.png" alt="...">
+            <img src="/static/img/logo.png" alt="..." width="auto" height="400">
+            <div class="overlay">
+              <div class="text">This is a project.</div>
+            </div>
           </a>
         </div>
       </div>
-      
-
-      <!-- <div class="container">
-        <img src="/static/img/depositphotos_21340889-stock-illustration-metatrons-cube-sacred-geometry-flower.jpg" class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h2 class="card-title">Something Else</h2>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>       -->
 
       <div class="responsive">
         <div class="project_gallery">
           <a target="_blank" href="/static/img/depositphotos_21340889-stock-illustration-metatrons-cube-sacred-geometry-flower.jpg">
-            <img src="/static/img/depositphotos_21340889-stock-illustration-metatrons-cube-sacred-geometry-flower.jpg" alt="..." width="600" height="400">
+            <img src="/static/img/depositphotos_21340889-stock-illustration-metatrons-cube-sacred-geometry-flower.jpg" alt="..." width="auto" height="400">
+            <div class="overlay">
+              <div class="text">This is a project.</div>
+            </div>
           </a>
         </div>
       </div>
-      
-
-      <!-- <div class="container">
-        <img src="/static/img/titanic_sibsp_age.PNG" class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h2 class="card-title">Card title</h2>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>       -->
 
       <div class="responsive">
         <div class="project_gallery">
           <a target="_blank" href="/static/img/titanic_sibsp_age.PNG">
-            <img src="/static/img/titanic_sibsp_age.PNG" alt="..." width="600" height="400">
+            <img src="/static/img/titanic_sibsp_age.PNG" alt="..." width="auto" height="400">
+            <div class="overlay">
+              <div class="text">This is a project.</div>
+            </div>
           </a>
         </div>
       </div>
