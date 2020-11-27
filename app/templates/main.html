@@ -13,7 +13,7 @@
 
     div.project_gallery {
       position: relative;
-      height: 400px;
+      height: 300px;
       border: 2px; 
       border-style: solid;
       border-color: var(--borderline);
@@ -74,14 +74,13 @@
 
     .text {
       /* white-space: pre-wrap; */
-      color: black;
-      font-size: 20px;
+      color: rgb(77, 20, 20);
+      font-size: 30px;
       font-weight: bold;
       opacity: 1;
       position: absolute;
       overflow: hidden;
-      /* margin-top: auto; */
-      /* margin-left: auto; */
+      text-align: center;
       top: 25%;
       left: 50%;
       transform: translate(-50%, 0%);
@@ -104,10 +103,10 @@
 
       <div class="responsive">
         <div class="project_gallery">
-          <a target="_blank" href="/static/img/titanic_sibsp_age.PNG">
-            <img src="/static/img/titanic_sibsp_age.PNG" alt="..." width="auto" height="400">
+          <a target="_blank" href="https://github.com/magdiel85281/titanic">
+            <img src="/static/img/titanic_sibsp_age.PNG" alt="..." width="auto" height="300">
             <div class="overlay">
-              <div class="text">This is a project. This is a project. This is a project. This is a project. This is a project.</div>
+              <div class="text"><p>Titanic:</p><p>Machine Learning from Disaster</p></div>
             </div>
           </a>
         </div>
@@ -115,10 +114,10 @@
       
       <div class="responsive">
         <div class="project_gallery">
-          <a target="_blank" href="/static/img/logo.png">
-            <img src="/static/img/logo.png" alt="..." width="auto" height="400">
+          <a target="_blank" href="https://github.com/magdiel85281/kaggle_sales_forecasting">
+            <img src="/static/img/moscow.PNG" alt="..." width="auto" height="300">
             <div class="overlay">
-              <div class="text">This is a project.</div>
+              <div class="text">Predict Future Sales</div>
             </div>
           </a>
         </div>
@@ -126,10 +125,10 @@
 
       <div class="responsive">
         <div class="project_gallery">
-          <a target="_blank" href="/static/img/depositphotos_21340889-stock-illustration-metatrons-cube-sacred-geometry-flower.jpg">
-            <img src="/static/img/depositphotos_21340889-stock-illustration-metatrons-cube-sacred-geometry-flower.jpg" alt="..." width="auto" height="400">
+          <a target="_blank" href="https://github.com/magdiel85281/galvanize_capstone">
+            <img src="/static/img/bill_labeling.PNG" alt="..." width="auto" height="300">
             <div class="overlay">
-              <div class="text">This is a project.</div>
+              <div class="text">Will the Bill Pass?</div>
             </div>
           </a>
         </div>
@@ -137,23 +136,29 @@
 
       <div class="responsive">
         <div class="project_gallery">
-          <a target="_blank" href="/static/img/titanic_sibsp_age.PNG">
-            <img src="/static/img/titanic_sibsp_age.PNG" alt="..." width="auto" height="400">
+          <a target="_blank" href="https://github.com/magdiel85281/portfolio">
+            <img src="/static/img/website_code.PNG" alt="..." width="auto" height="300">
             <div class="overlay">
-              <div class="text">This is a project.</div>
+              <div class="text">This Website</div>
             </div>
           </a>
         </div>
       </div>
       
+      <div class="responsive">
+        <div class="project_gallery">
+          <a target="_blank" href="https://medium.com/swlh/duplicate-your-mac-workflow-on-windows-10-7f8baf9b594c">
+            <img src="/static/img/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg" alt="..." width="auto" height="300">
+            <div class="overlay">
+              <div class="text">Duplicate Your Mac Workflow on Windows 10</div>
+            </div>
+          </a>
+        </div>
+      </div>
 
     <div class="clearfix"></div>
     
   <div style="padding: 8px;"></div>
-
-
-  {% include 'about_me.html' %}
-  {% include 'footer.html' %}
 
 </body>
 
