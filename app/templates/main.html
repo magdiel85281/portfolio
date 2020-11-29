@@ -14,10 +14,11 @@
     div.project_gallery {
       position: relative;
       height: 300px;
-      border: 2px; 
+      border: 0; 
       border-style: solid;
       border-color: var(--borderline);
-      border-radius: 5px;
+      border-radius: 10px;
+      margin: 20px;
       overflow: hidden;
     }
 
@@ -67,7 +68,7 @@
       height: 0;
       width: 100%;
       background-color: aqua;
-      opacity: 0.75;
+      opacity: 0.70;
       transition: .5s ease;
     }
 
@@ -75,7 +76,7 @@
     .text {
       /* white-space: pre-wrap; */
       color: rgb(77, 20, 20);
-      font-size: 30px;
+      font-size: 20px;
       font-weight: bold;
       opacity: 1;
       position: absolute;
@@ -129,6 +130,17 @@
             <img src="/static/img/bill_labeling.PNG" alt="..." width="auto" height="300">
             <div class="overlay">
               <div class="text">Will the Bill Pass?</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="project_gallery">
+          <a target="_blank" href="https://www.kaggle.com/parabolaeus/riiid-iterating-through-data">
+            <img src="/static/img/riiid_hists.PNG" alt="..." width="auto" height="300">
+            <div class="overlay">
+              <div class="text">Riiid! Answer Correctness Prediction</div>
             </div>
           </a>
         </div>
