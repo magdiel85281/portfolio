@@ -1,9 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MD Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/0fd397aa61.js" crossorigin="anonymous"></script>
+
+    <style>
+
+    li.footer-menu {
+        float: left;
+    }
+
+    li.footer-menu a {
+        color: aqua;
+        display: inline; 
+        text-align: center; 
+        padding: 14px 16px;
+        font-size: 20px;
+    }
+
+    </style>
+
+</head>
+
 {% block body %}
 
-    <footer class="footer_area section_gap">
-        <div class="container">
-            <p><strong>Footer</strong></p>
+    <footer class="footer_area" style="background: url(../static/img/paul-van-cotthem-gQZTOtbD2Js-unsplash.jpg); padding: 20px; width: 100%">
+        <div class="container-fluid" style="width: 100%">
+            <ul style="list-style-type: none;">
+                <li class="footer-menu">
+                    <img style="max-width:30px; margin-top:0px;" src="{{ url_for('static', filename='img/M.png') }}">
+                </li>
+                <li class="footer-menu"><a href='#'>Home</a></li>
+                <li class="footer-menu"><a href="#">Acknowledgements</a></li>
+            </ul>
         </div>
+
+        <div class="container-fluid" style="width: 100%;">
+            <p style="text-align: right; color: aqua">Created with <i class="fas fa-heart"></i> by Magdiel Delgadillo using Flask, html, css, and Bootstrap</p>
+            <p style="text-align: right; color: aqua">Hosted on <i class="fab fa-aws"></i> EC2</p>
+        </div>
+
     </footer>
     
 {% endblock %}
+
+</html>

@@ -101,6 +101,7 @@
 {% block body %}
 
 <body>
+  <div class="container-fluid" style="position: relative; top: 60px; height: 100%; padding-left: 10%; padding-right: 10%;">
 
       <div class="responsive">
         <div class="project_gallery">
@@ -169,10 +170,14 @@
       </div>
 
     <div class="clearfix"></div>
-    
-  <div style="padding: 8px;"></div>
+  
+  </div>
 
 </body>
+
+  {% include 'about_me.html' %}
+
+  {% include 'footer.html' %}
 
 {% endblock %}
 
