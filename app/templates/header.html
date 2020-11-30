@@ -91,65 +91,54 @@
     <!-- Button trigger modal -->
     <button type="button" class="btn" style="border: 3px solid var(--borderline);" data-toggle="modal" data-target="#eventInput" data-whatever="@mdo">Contact Me!</button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="eventInput" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Contact Me!</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-
-          <form id="target" action="/contact/">
-            <div class="modal-body">
-              <div class="form-group">
-                <label for="ContactName">Your Name</label>
-                <input type="text" class="form-control" name="ContactName" id="ContactName" placeholder="Name">
-              </div>
-              <div class="form-group">
-                <label for="ContactEmail">Your Email</label>
-                <input type="text" class="form-control" name="ContactEmail" id="ContactEmail" placeholder="Email">
-              </div>
-
-              <div class="form-group">
-                <label for="ContactMessage">Message</label>
-                <textarea type="text" class="form-control" name="ContactMessage" id="ContactMessage" style="white-space: pre-wrap;" placeholder="Message"></textarea>
-              </div>
-            </div>
-            
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Send Message</button>
-            </div>
-          </form>
-
-        </div>
-      </div>
-    </div>
   </nav>
 </header>
 
-<body>
+<!-- Modal -->
+<div class="modal fade" id="eventInput" tabindex="-1" aria-labelledby="contactModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModal">Contact Me!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
 
-  <div class="container-fluid" style="position: relative; top: 80px; height: 100%;">
-
-    <div class="jumbotron text-center">
-      <h1 class="display-4" style="background: url(../static/img/paul-van-cotthem-gQZTOtbD2Js-unsplash.jpg); letter-spacing: 10px; color:aqua"><strong>PORTFOLIO</strong></h1>
-        <p class="lead" style="letter-spacing: 8px; color:brown"><strong>MAGDIEL DELGADILLO</strong></p>
-          <div class="border border-primary" style="width: 100%; margin-bottom: 15px; opacity: 0.5;">
+      <form id="target" action="/contact/">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="ContactName">Your Name</label>
+            <input type="text" class="form-control" name="ContactName" id="ContactName" placeholder="Name">
           </div>
-        <p style="color:brown; letter-spacing: 3px;">Welcome. This is a collection of my work.</p>
+          <div class="form-group">
+            <label for="ContactEmail">Your Email</label>
+            <input type="text" class="form-control" name="ContactEmail" id="ContactEmail" placeholder="Email">
+          </div>
+
+          <div class="form-group">
+            <label for="ContactMessage">Message</label>
+            <textarea type="text" class="form-control" name="ContactMessage" id="ContactMessage" style="white-space: pre-wrap;" placeholder="Message"></textarea>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
+
     </div>
-  
   </div>
-    
+</div>
+
+
+<body>
 
     {% block body %}
 
     {% endblock %}
- 
 
 </body>
 
