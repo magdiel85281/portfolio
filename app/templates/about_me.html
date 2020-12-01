@@ -10,7 +10,6 @@
         :root {
             --brown-grad: -webkit-linear-gradient(#500a05, #c93c34);
             --dark-brown: #500a05
-
         }
 
         .icon-container {
@@ -32,6 +31,7 @@
         a:hover {
             cursor: pointer;
             color: aqua;
+            text-decoration: none;
         }
 
     </style>
@@ -40,21 +40,28 @@
 
 {% block body %}
 
-    <section class="section_gap">
-        <div class="container" style="position: relative; margin-top: 60px; padding: 20px;">
-            <div class="row align-items-center justify-content-between" style="max-width: 90%;">
+    <section class="section_gap" style="background-color: rgb(247, 245, 245)">
+        <div class="container" style="position: relative; margin-top: 80px; padding: 40px;">
+            <div class="row" style="max-width: 100%; padding: 40px;">
 
-                <div class="col col-lg-4">
+                <div class="col col-lg-3">
                     <img class="img-fluid" src="{{ url_for('static', filename='img/3899.jpg') }}" style="max-height: 300px;">
                 </div>
 
-                <div class="col-md-7">
-                    <div class="text-center" style="letter-spacing: 10px; text-shadow: 2px 2px 5px red;">
+                <div class="col-md-9">
+                    <div class="text-center" id="about_me" style="letter-spacing: 10px; margin-top: 40px; text-shadow: 2px 2px 5px red;">
                         <h1 style="color: var(--dark-brown);">ABOUT ME</h1>
                     </div>
-                    <div class="word-wrap" style="letter-spacing: 1px; color: var(--dark-brown)">
-                        <h6>A lifelong learner and Arizona State University Alum. With supporting text below as a natural lead-in to additional content</h6>
-                        <h6></h6>
+                    <div class="word-wrap" style="letter-spacing: 1px; color: var(--dark-brown); margin: 40px 20px;">
+                        <h6>
+                            A lifelong learner, Arizona State University Alum in Mathematics, former high school
+                            math teacher, and veteran paratrooper of the 82nd Airborne Division.
+                        </h6>
+                        <h6>
+                            My first experience in coding was on a Radio Shack Tandy computer in the early 90s. Upon 
+                            discovering the field of Data Science, I saw this as an opportunity to combine my interest 
+                            in creation through code with my passion for mathematics.
+                        </h6>
                     </div>
                 </div>
 
