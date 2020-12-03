@@ -18,10 +18,9 @@ installs:
 	sudo apt -y install php libapache2-mod-php
 	sudo systemctl restart apache2
 	sudo apt-get -y install python3-pip
-	export PATH=$PATH:/home/ubuntu/.local/bin
 
 env:
 	pip3 install -r requirements.txt
 
 app:
-	python app/__init__.py
+	python3 app/__init__.py
