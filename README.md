@@ -6,36 +6,51 @@ This repo houses code for the Flask app that showcases my portfolio.
 
 ## Deployment
 
-Currently, this app is being deployed on an instance of AWS Ubuntu 20.04. With the server spun up, you'll need to update/upgrade it, as well as install all the packages needed for deployment and use of the domain name. Clone the repo onto the server, and all the installs are taken care of with the following terminal commands:
+Currently, this app is designed to be deployed on an instance of AWS Ubuntu 20.04. With the server spun up, you'll need to update/upgrade it, as well as install all the server and Python packages needed for deployment and use of the domain name. To do this, connect to the instance using the ssh command and perform the following:
 
-`cd portfolio` <br>
-`sudo apt install make` <br>
-`make installs`
-
-Then, add the following to `~/.bashrc`...
+First, add the following to `~/.bashrc`:
 
 `export PATH=$PATH:/home/ubuntu/.local/bin`
 
-... and, once saved, enter terminal command:
+Once you've saved the changes:
 
 `source ~/.bashrc`
 
----
+Then, clone the repo and install the packages with:
 
-## Python Packages
+`git clone https://github.com/magdiel85281/portfolio.git`<br>
+`cd portfolio` <br>
+`sudo apt install make` <br>
+`make setup`
 
-Install the required Python packages with: 
-
-`make env`
-
-Note: I'm not using a virtual environment for this as it is the only thing running on this server.
-
+Once this has completed successfully, you should get the message `Server configured!`
 
 ---
 
 ## Use Domain Name
+To use your domain name, you'll need to make some changes to the Apache2 default configuration file and with your domian name host. For the former, use vim to modify it with:
 
-At your domain name host (i.e. Namecheap), modify the DNS settings to include the following: 
+`sudo vim /etc/apache2/sites-enabled/000-default.conf`
+
+Then, add the following after `DocumentRoot /var/www/html`
+
+        WSGIDaemonProcess flaskapp threads=5
+        ServerName mdelgadillo.com
+        WSGIScriptAlias / /var/www/html/flaskapp/flaskapp.wsgi
+
+        <Directory app>
+                WSGIProcessGroup flaskapp
+                WSGIApplicationGroup %{GLOBAL}
+                Order deny,allow
+                Allow from all
+        </Directory>
+
+
+Next, restart the Apache2 server with:
+
+`sudo service apache2 restart`
+
+Finally, at your domain name host (i.e. Namecheap), modify the DNS settings to include the following: 
 - Type: A Record
 - Host: @
 - Value: the server's Public IPv4 Address (i.e. 52.35.189.229)
