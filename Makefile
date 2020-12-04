@@ -2,13 +2,11 @@
 
 help:
 	@echo ""
-	@echo "installs: Updates and installs packages for Ubuntu server"
-	@echo ""
-	@echo "env: Install python packages"
+	@echo "setup: Clones repo and sets up server with installs and packages."
 	@echo ""
 	@echo "app: Run Flask app"
 
-env:
+setup:
 	sudo apt-get update
 	sudo apt-get upgrade
 
