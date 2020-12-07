@@ -44,7 +44,7 @@ installs:
 	# sudo apt -y install php libapache2-mod-php
 	sudo ln -sT ~/portfolio /var/www/html/flaskapp
 	sudo a2enmod wsgi
-	sudo systemctl restart apache2
+	sudo service apache2 restart
 
 	@echo "Server configured!"
 	@echo ""
