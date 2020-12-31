@@ -35,7 +35,7 @@ Once complete, activate the virtual environment with:
 
 ---
 
-## Apache2 Setup
+## Apache2 Setup and Python Packages
 To install and enable Apache2, first: 
 
 `make installs`
@@ -58,7 +58,12 @@ Then, add the following after `DocumentRoot /var/www/html`
         </Directory>
 
 
-Next, restart the Apache2 server with:
+Then, install the Python packages with:
+
+`make env`
+
+
+Finally, restart the Apache2 server with:
 
 `sudo service apache2 restart`
 
